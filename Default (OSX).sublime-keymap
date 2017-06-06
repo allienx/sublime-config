@@ -1,0 +1,27 @@
+[
+	// quick switch project
+	{ "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
+	{ "keys": ["super+ctrl+p"], "command": "prompt_select_workspace" },
+
+	// delete line
+	{ "keys": ["ctrl+y"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+	// move cursor to end of line
+	{ "keys": ["ctrl+;"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+	// move cursor to beginning of line
+	{ "keys": ["ctrl+shift+;"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+
+	// move shift+enter to add new line below
+	{ "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
+
+	// keep shift+enter keybindings
+	{ "keys": ["shift+enter"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["shift+enter"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["shift+enter"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
+	},
+]

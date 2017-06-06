@@ -1,0 +1,16 @@
+[
+	// quick switch project
+	{ "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
+
+	// re-map to make CTRL+Y available
+	{ "keys": ["ctrl+shift+y"], "command": "redo_or_repeat" },
+	{ "keys": ["ctrl+y"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+	// re-map to make CTRL+; available
+	{ "keys": ["ctrl+shift+;"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+	{ "keys": ["ctrl+;"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+
+	// enter new line below
+	{ "keys": ["ctrl+enter"], "command": "insert", "args": {"characters": "\n"} },
+	{ "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
+]
