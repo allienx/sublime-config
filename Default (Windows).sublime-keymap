@@ -2,15 +2,28 @@
 	// quick switch project
 	{ "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
 
-	// re-map to make CTRL+Y available
+	// delete line
 	{ "keys": ["ctrl+shift+y"], "command": "redo_or_repeat" },
 	{ "keys": ["ctrl+y"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 
-	// re-map to make CTRL+; available
-	{ "keys": ["ctrl+shift+;"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+	// move cursor to end of line
 	{ "keys": ["ctrl+;"], "command": "move_to", "args": {"to": "eol", "extend": false} },
 
+	// move cursor to beginning of line
+	// NOTE: this overwrites a default keymap
+	{ "keys": ["ctrl+shift+;"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+
 	// enter new line below
-	{ "keys": ["ctrl+enter"], "command": "insert", "args": {"characters": "\n"} },
 	{ "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
+
+	// keep default shift+enter keymaps
+	{ "keys": ["shift+enter"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["shift+enter"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["shift+enter"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
+	},
 ]
