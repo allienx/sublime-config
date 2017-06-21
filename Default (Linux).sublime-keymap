@@ -1,0 +1,23 @@
+[
+	// delete line
+	{ "keys": ["ctrl+shift+y"], "command": "redo_or_repeat" },
+	{ "keys": ["ctrl+y"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+	// move cursor to end of line
+	{ "keys": ["ctrl+shift+;"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+	{ "keys": ["ctrl+;"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+
+	// enter new line below
+	{ "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
+
+	// keep default shift+enter keymaps
+	{ "keys": ["shift+enter"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["shift+enter"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["shift+enter"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
+	},
+]
