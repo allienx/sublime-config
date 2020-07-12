@@ -18,6 +18,7 @@
 		"Vintage"
 	],
 	"remember_full_screen": true,
+	"scroll_past_end": true,
 	"show_encoding": true,
 	"show_line_endings": true,
 	"trim_trailing_white_space_on_save": true

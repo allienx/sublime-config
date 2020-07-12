@@ -6,8 +6,10 @@
 	"installed_packages":
 	[
 		"Babel",
+		"Dockerfile Syntax Highlighting",
+		"fish",
 		"Indent XML",
-		"Markdown Preview",
+		"MarkdownPreview",
 		"Package Control",
 		"Sass"
 	]
